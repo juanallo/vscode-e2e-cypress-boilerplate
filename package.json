@@ -3,9 +3,14 @@
 	"displayName": "vscode-e2e-cypress-boilerplate",
 	"description": "Boilerplate to add e2e tests to vscode extensions using Cypress.io and code-server",
 	"version": "0.0.1",
+	"publisher": "test",
 	"engines": {
-		"vscode": "^1.0.0"
+		"vscode": "^1.43.0"
 	},
+	"repository": {
+        "type": "git",
+        "url": "https://github.com/juanallo/vscode-e2e-cypress-boilerplate.git"
+    },
 	"categories": [
 		"Other"
 	],
@@ -22,13 +27,14 @@
 	"scripts": {
 		"lint": "eslint .",
 		"pretest": "yarn run lint",
-		"test": "node ./test/runTest.js"
+		"test": "node ./test/runTest.js",
+		"package": "mkdir -p dist && vsce package --out dist/test.vsix"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^7.0.1",
 		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.44.0",
+		"@types/vscode": "^1.43.0",
 		"eslint": "^6.8.0",
 		"glob": "^7.1.6",
 		"mocha": "^7.0.1",
