@@ -30,7 +30,9 @@
 		"test": "node ./test/runTest.js",
 		"package": "mkdir -p dist && vsce package --out dist/test.vsix",
 		"code-server-up": "docker-compose up -d && docker exec vscodeExtension code-server --install-extension /source/dist/test.vsix",
-        "code-server-down": "docker-compose down"
+		"code-server-down": "docker-compose down",
+		"e2e": "yarn code-server-up && cypress run && yarn code-server-down",
+		"e2e:debug": "yarn code-server-up && cypress open && yarn code-server-down"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
@@ -41,6 +43,8 @@
 		"glob": "^7.1.6",
 		"mocha": "^7.0.1",
 		"typescript": "^3.7.5",
-		"vscode-test": "^1.3.0"
+		"vscode-test": "^1.3.0",
+		"@testing-library/cypress": "^6.0.0",
+		"cypress": "^4.4.1"
 	}
 }
