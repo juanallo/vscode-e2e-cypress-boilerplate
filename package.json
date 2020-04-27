@@ -28,7 +28,9 @@
 		"lint": "eslint .",
 		"pretest": "yarn run lint",
 		"test": "node ./test/runTest.js",
-		"package": "mkdir -p dist && vsce package --out dist/test.vsix"
+		"package": "mkdir -p dist && vsce package --out dist/test.vsix",
+		"code-server-up": "docker-compose up -d && docker exec vscodeExtension code-server --install-extension /source/dist/test.vsix",
+        "code-server-down": "docker-compose down"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",

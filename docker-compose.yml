@@ -1,0 +1,10 @@
+version: '2'
+services:
+  test:
+    image: codercom/code-server:latest
+    command: "/source --auth none --disable-ssh --disable-updates --disable-telemetry"
+    container_name: vscodeExtension
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/source
