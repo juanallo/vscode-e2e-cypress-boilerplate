@@ -2,6 +2,8 @@
 
 Boilerplate to do e2e testing of vscode extension using Cypress and code-server
 
+Read a detail guide on how this was setup in my article [Testing VSCode Extensions with Cypress and code-server](https://juanmanuelalloron.com/2020/05/05/testing-vscode-extensions-with-cypress-and-code-server/)
+
 ## Details
 
 Vs code provides a way to test extension by running another vscode instance locally. While it is a great way of writing unit tests I did not find a proper way of doing E2E scenarios. 
